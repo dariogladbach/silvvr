@@ -28,14 +28,14 @@ gulp.task('watch', function () {
             gulp.start('rootfiles');
         });
 
-        watch(`${config.appDir.css}/**/*.css`, {
-            name: 'PostCSS Watcher',
+        watch(`${config.appDir.css}/**/*.{scss,sass}`, {
+            name: 'SASS Watcher',
             verbose: config.verbose
         }, function () {
             gulp.start('styles');
         });
 
-        watch(`${config.appDir.scripts}/**/*.js`, {
+        watch(`${config.appDir.js}/**/*.js`, {
             name: 'Scripts Watcher',
             verbose: config.verbose
         }, function () {
